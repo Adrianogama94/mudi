@@ -14,7 +14,7 @@ import br.com.alura.mvc.mudi.model.Pedido;
 import br.com.alura.mvc.mudi.repository.PedidoRepository;
 
 @Controller
-@RequestMapping("pedido")
+@RequestMapping("/pedido")
 public class PedidosController {
 	
 	@Autowired
@@ -35,7 +35,7 @@ public class PedidosController {
 		Pedido pedido = requisicao.toPedido();
 		pedidoRepository.save(pedido);
 		
-		return "pedido/formulario";
+		return "redirect:/home";
 	}
 	
 }
